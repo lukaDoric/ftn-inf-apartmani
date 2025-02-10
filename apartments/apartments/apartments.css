@@ -1,0 +1,26 @@
+#apartments {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#apartments th {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#apartments td {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+}

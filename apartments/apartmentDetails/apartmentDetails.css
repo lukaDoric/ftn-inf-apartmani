@@ -1,0 +1,24 @@
+#apartmentDetails #name {
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#apartmentDetails #description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
