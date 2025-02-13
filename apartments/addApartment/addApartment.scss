@@ -1,0 +1,109 @@
+$primary-color: #3498db;
+$primary-hover: #2980b9;
+$danger-color: #e74c3c;
+$danger-hover: #c0392b;
+$danger-active: #b03a2e;
+$text-color: #2c3e50;
+$secondary-text: #555;
+$background-color: #fff;
+$border-color: #ddd;
+$box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$box-shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+$radius: 5px;
+$padding-input: 10px;
+$padding-form: 20px;
+$margin-bottom: 10px;
+$transition: 0.3s ease;
+
+#form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: $padding-form;
+    background-color: $background-color;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    label {
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: 5px;
+        display: inline-block;
+        margin-right: 20px;
+
+        input[type="radio"] + span {
+            font-size: 16px;
+            color: $secondary-text;
+        }
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: $padding-input;
+        font-size: 16px;
+        color: #333;
+        border: 1px solid $border-color;
+        border-radius: $radius;
+        box-shadow: $box-shadow-inset;
+        transition: border-color $transition;
+
+        &:focus {
+            border-color: $primary-color;
+            outline: none;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: $margin-bottom;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: $radius;
+        cursor: pointer;
+        transition: background-color $transition;
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+    }
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: $danger-color;
+    color: #fff;
+    border: none;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: background-color $transition, transform 0.2s ease;
+    text-align: center;
+
+    &:hover {
+        background-color: $danger-hover;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        background-color: $danger-active;
+        transform: translateY(1px);
+    }
+}

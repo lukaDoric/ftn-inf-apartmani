@@ -1,0 +1,37 @@
+$primary-color: #3498db;
+$text-color: #2c3e50;
+$description-color: #555;
+$background-light: #f9f9f9;
+$shadow-strong: 2px 2px 4px rgba(0, 0, 0, 0.2);
+$shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+$border-radius: 5px;
+$padding-horizontal: 20px;
+$padding-left: 15px;
+$margin-bottom: 20px;
+
+#apartmentDetails {
+    #name {
+        font-size: 28px;
+        color: $text-color;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: $margin-bottom;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: $shadow-strong;
+    }
+
+    #description {
+        font-size: 18px;
+        color: $description-color;
+        line-height: 1.8;
+        text-align: justify;
+        padding: 0 $padding-horizontal;
+        margin-bottom: $margin-bottom;
+        border-left: 4px solid $primary-color;
+        padding-left: $padding-left;
+        background-color: $background-light;
+        box-shadow: $shadow-light;
+        border-radius: $border-radius;
+    }
+}
