@@ -1,6 +1,6 @@
 #form {
   max-width: 600px;
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -62,7 +62,7 @@ button {
   display: block;
   width: 100%;
   max-width: 200px;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 10px 20px;
   font-size: 18px;
   background-color: #e74c3c;

@@ -1,26 +1,44 @@
+#table-details {
+  padding: 10px;
+  display: flex;
+}
+#table-details table, #table-details div {
+  padding: 10px;
+  width: 50%;
+}
+
 #apartments {
-  width: 80%;
-  margin: 40px auto;
   border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
 }
 #apartments th {
-  background-color: #3498db;
+  background: #3498db;
   color: white;
-  padding: 15px;
+  padding: 10px;
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 #apartments td {
-  padding: 15px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
   text-align: center;
   color: #2c3e50;
   border-bottom: 1px solid #ddd;
+}
+
+#apartmentDetails #name {
+  font-size: 18px;
+  color: #2c3e50;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#myChart {
+  padding: 10px;
+  max-width: 50%;
+  max-height: 300px;
 }
 
 /*# sourceMappingURL=apartments.css.map */

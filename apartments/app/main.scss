@@ -44,11 +44,12 @@ body {
 
     li {
         margin: 0;
+        color: $white;
     }
 
     a {
-        text-decoration: none;
         color: $white;
+        text-decoration: none;
         font-size: 18px;
         transition: color 0.3s ease;
 
@@ -69,7 +70,6 @@ body {
 
     p {
         font-size: 18px;
-        color: darken($text-color, 20%);
         margin-top: 10px;
         max-width: 800px;
         margin-left: auto;

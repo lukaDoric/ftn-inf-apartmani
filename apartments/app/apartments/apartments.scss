@@ -2,33 +2,53 @@ $primary-color: #3498db;
 $text-color: #2c3e50;
 $background-color: #fff;
 $border-color: #ddd;
-$box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-$padding-size: 15px;
+$padding: 10px;
 $radius: 10px;
 
+#table-details {
+    padding: $padding;
+    display: flex;
+
+    table, div {
+        padding: $padding;
+        width: 50%;
+    }
+}
+
 #apartments {
-    width: 80%;
-    margin: 40px auto;
     border-collapse: collapse;
-    background-color: $background-color;
-    box-shadow: $box-shadow;
+    background: $background-color;
     border-radius: $radius;
     overflow: hidden;
 
     th {
-        background-color: $primary-color;
+        background: $primary-color;
         color: white;
-        padding: $padding-size;
+        padding: $padding;
         font-size: 18px;
         text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
     td {
-        padding: $padding-size;
-        font-size: 16px;
+        padding: $padding;
+        font-size: 14px;
         text-align: center;
         color: $text-color;
         border-bottom: 1px solid $border-color;
     }
+}
+
+#apartmentDetails {
+    #name {
+        font-size: 18px;
+        color: $text-color;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+#myChart {
+    padding: $padding;
+    max-width: 50%;
+    max-height: 300px;
 }
