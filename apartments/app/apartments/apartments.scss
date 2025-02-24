@@ -1,50 +1,48 @@
 @import '../styles/global';
 
 #table-details {
-    padding: 1rem;
-  
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-  
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 0.5rem;
-        text-align: left;
-      }
-  
-      th {
-        background-color: $primary-color;
-        color: white;
-      }
-  
-      tr:hover {
-        background-color: #f1f1f1;
-      }
-    }
-  }
+  padding: 1rem;
 
-  #apartmentDetails {
+  table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 1rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    background-color: #fff;
-  
-    h3 {
-      margin: 0;
-      color: $primary-color;
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
     }
   }
-  
-  #myChart {
-    width: 50%;
-    height: 400px;
-    margin: 2rem auto; 
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 1rem;
+}
+
+#apartmentDetails {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+
+  h3 {
+    margin: 0;
+    color: $primary-color;
   }
-  
+}
+
+#myChart {
+  width: 50%;
+  height: 400px;
+  margin: 20px auto; 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}

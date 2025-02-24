@@ -8,19 +8,17 @@ body {
 .navbar {
   background-color: #007bff;
   color: white;
-  padding: 1rem;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.nav-links {
+.navbar .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 10px;
 }
-
-.nav-links a {
+.navbar .nav-links a {
   color: white;
   text-decoration: none;
 }
@@ -29,11 +27,11 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
   cursor: pointer;
 }
 button:hover {
-  background-color: #0056b3;
+  background-color: #1d4673;
 }
 
 #table-details {
@@ -44,8 +42,7 @@ button:hover {
   border-collapse: collapse;
   margin-top: 1rem;
 }
-#table-details table th,
-#table-details table td {
+#table-details table th, #table-details table td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
@@ -59,8 +56,8 @@ button:hover {
 }
 
 #apartmentDetails {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 10px;
+  padding: 10px;
   border: 1px solid #ddd;
   background-color: #fff;
 }
@@ -72,11 +69,11 @@ button:hover {
 #myChart {
   width: 50%;
   height: 400px;
-  margin: 2rem auto;
+  margin: 20px auto;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 1rem;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=apartments.css.map */

@@ -8,19 +8,17 @@ body {
 .navbar {
   background-color: #007bff;
   color: white;
-  padding: 1rem;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.nav-links {
+.navbar .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 10px;
 }
-
-.nav-links a {
+.navbar .nav-links a {
   color: white;
   text-decoration: none;
 }
@@ -29,11 +27,11 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
   cursor: pointer;
 }
 button:hover {
-  background-color: #0056b3;
+  background-color: #1d4673;
 }
 
 /*# sourceMappingURL=index.css.map */

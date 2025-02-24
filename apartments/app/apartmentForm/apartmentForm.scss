@@ -15,12 +15,8 @@ form {
     display: flex;
     flex-direction: column;
     width: 300px;
-}
 
-label {
-    font-weight: bold;
-}
-
-p {
-    font-weight: bold;
+    label, p {
+        font-weight: bold;
+    }
 }

@@ -1,5 +1,5 @@
 $primary-color: #007bff;
-$accent-color: #0056b3;
+$accent-color: #1d4673;
 $warn-color: #dc3545;
 
 body {
@@ -12,28 +12,28 @@ body {
 .navbar {
   background-color: $primary-color;
   color: white;
-  padding: 1rem;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 button {
   background-color: $primary-color;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
   cursor: pointer;
   &:hover {
     background-color: $accent-color;

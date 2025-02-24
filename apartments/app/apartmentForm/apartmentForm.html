@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../dist/apartmentForm/apartmentForm.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="title">FtnInformatikaBooking</h1>
+      <ul class="nav-links">
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="../apartments/apartments.html">Apartments</a></li>
+        <li><b>Add apartment</b></li>
+      </ul>
+    </nav>
+
+    <main>
+      <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+
+        <label for="capacity">Capacity:</label>
+        <input type="number" id="capacity" name="capacity" />
+        <br />
+
+        <label for="pricePerNight">Price per night:</label>
+        <input type="number" id="pricePerNight" name="pricePerNight" />
+        <br />
+
+        <p>Pets allowed:</p>
+        <label>
+          <input type="radio" name="petsAllowed" value="true" />
+          Yes
+        </label>
+        <label>
+          <input type="radio" name="petsAllowed" value="false" />
+          No
+        </label>
+      </form>
+      <br />
+      <button type="button" id="submitBtn">Save</button>
+    </main>
+
+    <script src="apartmentForm.js"></script>
+  </body>
+</html>

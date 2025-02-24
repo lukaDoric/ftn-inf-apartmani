@@ -1,5 +1,6 @@
 class Apartment {
-  constructor(name, capacity, pricePerNight, petsAllowed) {
+  constructor(id, name, capacity, pricePerNight, petsAllowed) {
+    this.id = id
     this.name = name
     this.capacity = capacity
     this.pricePerNight = pricePerNight
@@ -7,22 +8,28 @@ class Apartment {
   }
 }
   
-let apartments = []
-  
-function createApartmentRows() {
+function createApartmentRows(apartments) {
   let table = document.querySelector("#apartments")
 
   for (let i = 0; i < apartments.length; i++) {
     let tr = document.createElement("tr")
     
     let rb = document.createElement("td")
-    let name = document.createElement("td")
-    
     rb.textContent = i + 1
+    let name = document.createElement("td")
     name.textContent = apartments[i].name
+
+    let edit = document.createElement("td")
+    let editButton = document.createElement("button")
+    editButton.textContent = "Edit"
+    editButton.addEventListener("click", function () { //
+      window.location.href = '../apartmentForm/apartmentForm.html?id=' + apartments[i].id;
+    })
+    edit.appendChild(editButton)
     
     tr.appendChild(rb)
     tr.appendChild(name)
+    tr.appendChild(edit)
     table.appendChild(tr)
     
     tr.addEventListener("click", function () {
@@ -31,31 +38,36 @@ function createApartmentRows() {
   }
 }
 
-function displayApartmentDetails(apartment) { // TODO
+function displayApartmentDetails(apartment) {
   let petsAllowed = "NO"
-  if (apartment.pets === 'true') petsAllowed = "YES"
+  if (apartment.petsAllowed) {
+    petsAllowed = "YES"
+  }
 
   let apartmentName = document.querySelector("#name")
   apartmentName.innerHTML = apartment.name
 
   let description = document.querySelector("#description")
-  description.innerHTML = "<br>" + "Capacity: " + apartment.capacity + "<br>" + "Price (per night): " + apartment.pricePerNight +
-  "<br>" + "Pets allowed: " + petsAllowed
+  description.innerHTML =
+    "<br>" + "Capacity: " + apartment.capacity +
+    "<br>" + "Price (per night): " + apartment.pricePerNight +
+    "<br>" + "Pets allowed: " + petsAllowed
 }
 
 
 function initializeApartments() {
+  let apartments = []
   let apartmentsString = localStorage.getItem("apartments");
   if(apartmentsString) {
     apartments = JSON.parse(apartmentsString)
   }
   
-  createApartmentRows()
-  drawChart()
+  createApartmentRows(apartments)
+  drawChart(apartments)
 }
 
-function drawChart() {
-  const ctx = document.getElementById("myChart")
+function drawChart(apartments) {
+  const ctx = document.querySelector("#myChart")
   let labels = []
   let colors = []
   let borderColors = []
