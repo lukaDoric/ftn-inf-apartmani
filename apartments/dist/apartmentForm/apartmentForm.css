@@ -34,7 +34,7 @@ button:hover {
   background-color: #1d4673;
 }
 
-main {
+div {
   display: flex;
   flex-direction: column;
   justify-content: center;
