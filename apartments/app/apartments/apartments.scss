@@ -1,54 +1,50 @@
-$primary-color: #3498db;
-$text-color: #2c3e50;
-$background-color: #fff;
-$border-color: #ddd;
-$padding: 10px;
-$radius: 10px;
+@import '../styles/global';
 
 #table-details {
-    padding: $padding;
-    display: flex;
-
-    table, div {
-        padding: $padding;
-        width: 50%;
-    }
-}
-
-#apartments {
-    border-collapse: collapse;
-    background: $background-color;
-    border-radius: $radius;
-    overflow: hidden;
-
-    th {
-        background: $primary-color;
+    padding: 1rem;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+  
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        text-align: left;
+      }
+  
+      th {
+        background-color: $primary-color;
         color: white;
-        padding: $padding;
-        font-size: 18px;
-        text-transform: uppercase;
+      }
+  
+      tr:hover {
+        background-color: #f1f1f1;
+      }
     }
+  }
 
-    td {
-        padding: $padding;
-        font-size: 14px;
-        text-align: center;
-        color: $text-color;
-        border-bottom: 1px solid $border-color;
+  #apartmentDetails {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  
+    h3 {
+      margin: 0;
+      color: $primary-color;
     }
-}
-
-#apartmentDetails {
-    #name {
-        font-size: 18px;
-        color: $text-color;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-
-#myChart {
-    padding: $padding;
-    max-width: 50%;
-    max-height: 300px;
-}
+  }
+  
+  #myChart {
+    width: 50%;
+    height: 400px;
+    margin: 2rem auto; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  

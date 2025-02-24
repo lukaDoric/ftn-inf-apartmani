@@ -1,104 +1,26 @@
-$primary-color: #3498db;
-$primary-hover: #2980b9;
-$text-color: #2c3e50;
-$danger-color: #e74c3c;
-$danger-hover: #c0392b;
-$danger-active: #b03a2e;
-$border-color: #ddd;
-$box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-$padding-size: 10px;
-$border-radius: 5px;
-$margin-bottom: 10px;
+@import '../styles/global';
 
-#form {
-    max-width: 600px;
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: $box-shadow;
+main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
-    label {
-        font-size: 18px;
-        color: $text-color;
-        margin-bottom: 5px;
-        display: inline-block;
-        margin-right: 20px;
-
-        input[type="radio"] + span {
-            font-size: 16px;
-            color: #555;
-        }
-    }
-
-    input[type="text"],
-    input[type="number"] {
-        width: 100%;
-        padding: $padding-size;
-        font-size: 16px;
-        color: #333;
-        border: 1px solid $border-color;
-        border-radius: $border-radius;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-        transition: border-color 0.3s ease;
-
-        &:focus {
-            border-color: $primary-color;
-            outline: none;
-        }
-    }
-
-    p {
-        font-size: 18px;
-        color: $text-color;
-        margin-bottom: $margin-bottom;
-    }
-
-    input[type="radio"] {
-        margin-right: 10px;
-    }
-
-    input[type="submit"] {
-        background-color: $primary-color;
-        color: white;
-        padding: 10px 15px;
-        font-size: 18px;
-        border: none;
-        border-radius: $border-radius;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: $primary-hover;
-        }
-    }
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
-button {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: $danger-color;
-    color: #fff;
-    border: none;
-    border-radius: $border-radius;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
+form {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
 
-    &:hover {
-        background-color: $danger-hover;
-        transform: translateY(-2px);
-    }
+label {
+    font-weight: bold;
+}
 
-    &:active {
-        background-color: $danger-active;
-        transform: translateY(1px);
-    }
+p {
+    font-weight: bold;
 }
