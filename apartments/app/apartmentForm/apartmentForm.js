@@ -9,19 +9,19 @@ class Apartment {
 }
 
 function initializeForm() {
-    // Učitaj postojeće apartmane
-    let apartmentsString = localStorage.getItem("apartments");
     let apartments = []
+    // Učitaj postojeće apartmane
+    let apartmentsString = localStorage.getItem("apartments")
     if(apartmentsString) {
         apartments = JSON.parse(apartmentsString)
     }
 
-    let urlParams = new URLSearchParams(window.location.search);
-    let id = urlParams.get('id');
+    let urlParams = new URLSearchParams(window.location.search)
+    let id = urlParams.get('id')
     if(id) { // Postavi formu spram toga da li menja postojeći apartman ili dodaje nov
-        initializeUpdateForm(id, apartments);
+        initializeUpdateForm(id, apartments)
     } else {
-        initializeAddForm(apartments);
+        initializeAddForm(apartments)
     }
 }
 
@@ -37,13 +37,13 @@ function initializeUpdateForm(id, apartments) {
         window.location.href = '../apartments/apartments.html'
     }
     
-    document.querySelector('input[name="name"]').value = apartment.name;
-    document.querySelector('input[name="capacity"]').value = apartment.capacity;
-    document.querySelector('input[name="pricePerNight"]').value = apartment.pricePerNight;
+    document.querySelector('input[name="name"]').value = apartment.name
+    document.querySelector('input[name="capacity"]').value = apartment.capacity
+    document.querySelector('input[name="pricePerNight"]').value = apartment.pricePerNight
     if(apartment.petsAllowed) {
-        document.querySelector('input[name="petsAllowed"][value="true"]').checked = true;
+        document.querySelector('input[name="petsAllowed"][value="true"]').checked = true
     } else {
-        document.querySelector('input[name="petsAllowed"][value="false"]').checked = true;
+        document.querySelector('input[name="petsAllowed"][value="false"]').checked = true
     }
 
     let submitBtn = document.querySelector('#submitBtn')
@@ -101,13 +101,13 @@ function getFormData() {
 }
 
 function calculateNewId(apartments) {
-    let maxId = 0;
+    let maxId = 0
     for (let i = 0; i < apartments.length; i++) {
         if(apartments[i].id > maxId) {
             maxId = apartments[i].id
         }
     }
-    return maxId + 1;
+    return maxId + 1
 }
 
 document.addEventListener("DOMContentLoaded", initializeForm)

@@ -7,6 +7,17 @@ class Apartment {
     this.petsAllowed = petsAllowed
   }
 }
+
+function initializeApartments() {
+  let apartments = []
+  let apartmentsString = localStorage.getItem("apartments")
+  if(apartmentsString) {
+    apartments = JSON.parse(apartmentsString)
+  }
+  
+  createApartmentRows(apartments)
+  drawChart(apartments)
+}
   
 function createApartmentRows(apartments) {
   let table = document.querySelector("#apartments")
@@ -23,7 +34,7 @@ function createApartmentRows(apartments) {
     let editButton = document.createElement("button")
     editButton.textContent = "Edit"
     editButton.addEventListener("click", function () { //
-      window.location.href = '../apartmentForm/apartmentForm.html?id=' + apartments[i].id;
+      window.location.href = '../apartmentForm/apartmentForm.html?id=' + apartments[i].id
     })
     edit.appendChild(editButton)
     
@@ -54,18 +65,6 @@ function displayApartmentDetails(apartment) {
     "<br>" + "Pets allowed: " + petsAllowed
 }
 
-
-function initializeApartments() {
-  let apartments = []
-  let apartmentsString = localStorage.getItem("apartments");
-  if(apartmentsString) {
-    apartments = JSON.parse(apartmentsString)
-  }
-  
-  createApartmentRows(apartments)
-  drawChart(apartments)
-}
-
 function drawChart(apartments) {
   const ctx = document.querySelector("#myChart")
   let labels = []
@@ -86,7 +85,7 @@ function drawChart(apartments) {
       labels: labels,
       datasets: [
         {
-          label: "Cene hotela po noci",
+          label: "Cene apartmana po noci",
           data: data,
           backgroundColor: colors,
           borderColor: borderColors,
