@@ -52,15 +52,10 @@ function initializeUpdateForm(id, apartments) {
         const formApartment = getFormData()
     
         // Izmeni postojeći apartman
-        for(const apartment of apartments) {
-            if(apartment.id == id) {
-                apartment.name = formApartment.name
-                apartment.capacity = formApartment.capacity
-                apartment.pricePerNight = formApartment.pricePerNight
-                apartment.petsAllowed = formApartment.petsAllowed
-                break
-            }
-        }
+        apartment.name = formApartment.name
+        apartment.capacity = formApartment.capacity
+        apartment.pricePerNight = formApartment.pricePerNight
+        apartment.petsAllowed = formApartment.petsAllowed
 
         localStorage.setItem("apartments", JSON.stringify(apartments))
         // Prebaci se na pregled svih apartmana
